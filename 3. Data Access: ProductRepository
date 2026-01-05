@@ -1,0 +1,5 @@
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    // Custom query to find products by name containing a string
+    List<Product> findByNameContainingIgnoreCase(String name);
+}
